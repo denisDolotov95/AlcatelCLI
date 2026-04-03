@@ -1,0 +1,22 @@
+services:
+  alcatel_cli:
+    container_name: ${CONTAINER_ID:-None}_${CONTAINER_NAME:-None}
+    image: ${CONTAINER_NAME:-None}:${BRANCH}-${TAG}-${COMMIT_SHORT_SHA}
+    build: .
+    volumes:
+      - "alcatel_cli_log:/usr/src/app/log:rw"
+    restart: always
+    hostname: ${CONTAINER_ID:-None}_${CONTAINER_NAME:-None}
+    environment:
+      - VERSION=${BRANCH}-${TAG}-${COMMIT_SHORT_SHA}
+      - CONTAINER_ID=${CONTAINER_ID}
+    networks:
+      - production
+
+volumes:
+  alcatel_cli_log:
+    external: True
+  
+networks:
+  production:
+    external: True

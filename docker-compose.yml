@@ -4,7 +4,7 @@ services:
     image: ${CONTAINER_NAME:-None}:${BRANCH}-${TAG}-${COMMIT_SHORT_SHA}
     build: .
     volumes:
-      - "alcatel_cli_log:/usr/src/app/log:rw"
+      - "alcatel_cli_data:/usr/src/app/data:rw"
     restart: always
     hostname: ${CONTAINER_ID:-None}_${CONTAINER_NAME:-None}
     environment:
@@ -14,7 +14,7 @@ services:
       - production
 
 volumes:
-  alcatel_cli_log:
+  alcatel_cli_data:
     external: True
   
 networks:

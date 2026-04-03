@@ -33,24 +33,6 @@ getVersion:
       dotenv:
         - .env
 
-# default:
-#   interruptible: false
-#   tags:
-#     -
-
-# unitTestJob:
-#   stage: unit-test
-#   only:
-#     - tags
-#   except:
-#     - branches
-#   variables:
-#     GIT_SUBMODULE_STRATEGY: recursive
-#     GIT_SUBMODULE_UPDATE_FLAGS: --remote --merge
-#   script:
-#     - echo "Start unit-test..."
-#     - /home/gitlab-runner/venv3.12/bin/pytest
-
 rebuildContainerJob:
   stage: rebuild-container
   needs:

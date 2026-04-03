@@ -11,7 +11,7 @@ SCHEDULE_TIME = os.environ.get("SCHEDULE_TIME", "00:30")
 NUMBER_THREADS = os.environ.get("NUMBER_THREADS", 3)
 # ----------------------------------------------------------------------------------------
 PATH_ALCATEL_NETWORK_ELEMENTS = (
-    "./data/ne_alcatel/all_alcatel_network_elements_on_men.csv"
+    "./app/data/network_elements.csv"
 )
 # ----------------------------------------------------------------------------------------
 SSH_CONNECTION = {

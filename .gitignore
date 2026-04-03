@@ -60,5 +60,5 @@ target/
 *.out
 *.err
 
-data/
+# data/
 # authentication.py
